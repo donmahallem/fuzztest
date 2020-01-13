@@ -1,5 +1,5 @@
 {
-    "name": "@donmahallem/trapeze-api-client-cache",
+    "name": "@donmahallem/fuzztest",
     "version": "1.1.0",
     "description": "",
     "main": "dist/index.js",
@@ -21,10 +21,11 @@
         "test:build": "npm run build",
         "test:unit": "npm run test-ci",
         "test:docs": "npm run docs",
-        "prepublishOnly": "npm run build"
+        "prepublishOnly": "npm run build",
+        "fuzz": "jsfuzz ./dist/index.js corpus"
     },
     "dependencies": {
-        "@donmahallem/trapeze-api-client": "~3.0.1"
+        "jpeg-js": "^0.3.6"
     },
     "devDependencies": {
         "@types/chai": "~4.2.7",
@@ -34,6 +35,7 @@
         "@types/request-promise-native": "~1.0.17",
         "@types/sinon": "~7.5.1",
         "chai": "~4.2.0",
+        "jsfuzz": "^1.0.14",
         "mocha": "~7.0.0",
         "nodemon": "~2.0.2",
         "nyc": "~15.0.0",
@@ -43,9 +45,7 @@
         "typedoc": "~0.15.6",
         "typescript": "~3.7.4"
     },
-    "peerDependencies": {
-        "@donmahallem/trapeze-api-types": ">=1.2.0 <3.0.0"
-    },
+    "peerDependencies": {},
     "nyc": {
         "include": [
             "src/*.ts",
@@ -76,7 +76,7 @@
         "dist/*",
         "src/*"
     ],
-    "homepage": "https://donmahallem.github.io/TrapezeApiClientCacheNode/",
+    "homepage": "https://donmahallem.github.io/fuzztest/",
     "author": {
         "name": "donmahallem",
         "email": "donmahallem@users.noreply.github.com",
@@ -84,11 +84,11 @@
     },
     "license": "Apache-2.0",
     "bugs": {
-        "url": "https://github.com/donmahallem/TrapezeApiClientCacheNode/issues"
+        "url": "https://github.com/donmahallem/fuzztest/issues"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/donmahallem/TrapezeApiClientCacheNode.git"
+        "url": "https://github.com/donmahallem/fuzztest.git"
     },
     "engines": {
         "node": ">=8.0.0"
